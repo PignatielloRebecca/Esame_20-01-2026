@@ -34,6 +34,8 @@ class View:
 
         #row2
         self.ddArtist = ft.Dropdown(label="Artista", width = 250, disabled=True)
+        for a in self._controller.popola_dropdown():
+            self.ddArtist.options.append(ft.dropdown.Option(key=str(a.id), text=str(a.name)))
         self.btnArtistsConnected = ft.ElevatedButton(text="Artisti collegati", width = 150, disabled=True, on_click=self._controller.handle_connected_artists )
         row2 = ft.Row([self.ddArtist, self.btnArtistsConnected],
                       alignment=ft.MainAxisAlignment.CENTER)

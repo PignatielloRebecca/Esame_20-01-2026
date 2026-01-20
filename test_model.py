@@ -47,3 +47,5 @@ plt.savefig("plot")
 plt.show()
 """
 
+print(my_model.build_graph(5))
+
